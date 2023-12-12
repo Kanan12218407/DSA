@@ -1,0 +1,53 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+//call by value:
+void swap(int x,int y){
+    int temp;
+    temp=x;
+    x=y;
+    y=temp;
+}
+int main(){
+    int num1=15;int num2=5;
+    swap(num1,num2);
+    cout<<"number 1 is: "<<num1<<endl;
+    cout<<"number 2 is: "<<num2<<endl;
+    return 0;
+//call by address:
+// void swap(int *x,int *y){
+//     int temp;
+//     temp=*x;
+//     *x=*y;
+//     *y=temp;
+// }
+// int main(){
+//     int num1=15;int num2=5;
+//     swap(&num1,&num2);
+//     cout<<"number 1 is: "<<num1<<endl;
+//     cout<<"number 2 is: "<<num2<<endl;
+//     return 0;
+
+//call by reference:
+// void swap(int &x,int &y){
+//     int temp;
+//     temp=x;
+//     x=y;
+//     y=temp;
+// }
+// int main(){
+//     int num1=15;int num2=5;
+//     swap(num1,num2);
+//     cout<<"number 1 is: "<<num1<<endl;
+//     cout<<"number 2 is: "<<num2<<endl;
+//     return 0;
+}
+output:
+15
+5
+
+5
+15
+
+5
+15
