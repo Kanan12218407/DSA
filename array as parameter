@@ -1,0 +1,44 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+program 1:
+void fun(int A[],int n)//can also use * in place of [].
+{
+    // for(int i=0;i<n;i++){
+    // cout<<A[i]<<endl;
+    // }
+    A[0]=24;
+    A[3]=7;
+    // cout<<sizeof(A)/sizeof(int)<<endl;
+}
+int main(){
+    int A[]={1,2,3,4,5};
+    int n=5;
+    fun(A,n);
+    // cout<<sizeof(A)/sizeof(int)<<endl;
+    for(int x:A){
+        cout<<x<<" ";
+    }
+    return 0;
+}
+
+
+program 2:
+int * fun(int size){
+    int *p;
+    p=new int[size];
+    
+    for(int i=0;i<size;i++)
+        p[i]=i+1;
+        
+        return p;
+}
+        
+int main(){
+    int *ptr,sz=5;
+    ptr=fun(sz);
+    for(int i=0;i<sz;i++){
+        cout<<ptr[i]<<" ";
+    }
+    return 0;
+}
