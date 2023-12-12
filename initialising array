@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+int main(){
+    int n;
+    cout<<"enter size of your array: "<<endl;
+    cin>>n;
+    
+	int A[n];
+	A[0]=1;
+	A[1]=2;
+	A[2]=3;
+	A[3]=4;
+	A[4]=5;
+	
+	cout<<"size of the array is: "<<sizeof(A)<<endl;
+	for(int x:A)
+	{
+		cout<<x<<endl;
+	}
+	return 0;
+}
+
+
+enter size of your array: 
+5
+size of the array is: 20
+1
+2
+3
+4
+5
