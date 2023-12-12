@@ -1,0 +1,84 @@
+USING STRUCTURE:
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+using namespace std;
+struct rectangle
+{
+    int length;
+    int breadth;
+
+void initialise(int l,int b){
+    length=l;
+    breadth=b;
+}
+int area(){
+    return (length*breadth);
+}
+int perimeter(){
+    int p;
+    p=2*(length+breadth);
+    return p;
+}
+};
+int main(){
+    struct rectangle r={0,0};
+    int l,b;
+    
+    cout<<"enter the length and breadth of the rectangle: "<<endl;
+    cin>>l>>b;
+    r.initialise(l,b);
+    // cin>>r.length>>r.breadth;
+    
+    int a=r.area();
+    int peri=r.perimeter();
+    cout<<"area is: "<<a<<" "<<"perimeter is: "<<peri<<endl;
+    return 0;
+}
+output:
+enter the length and breadth of the rectangle: 
+10 5
+area is: 50 perimeter is: 30
+
+USING CLASS:
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+using namespace std;
+class rectangle
+{
+public:
+    int length;
+    int breadth;
+
+void initialise(int l,int b){
+    length=l;
+    breadth=b;
+}
+int area(){
+    return (length*breadth);
+}
+int perimeter(){
+    int p;
+    p=2*(length+breadth);
+    return p;
+}
+};
+int main(){
+    rectangle r;
+    int l,b;
+    
+    cout<<"enter the length and breadth of the rectangle: "<<endl;
+    cin>>l>>b;
+    r.initialise(l,b);
+    // cin>>r.length>>r.breadth;
+    
+    int a=r.area();
+    int peri=r.perimeter();
+    cout<<"area is: "<<a<<" "<<"perimeter is: "<<peri<<endl;
+    return 0;
+}
+output:
+enter the length and breadth of the rectangle: 
+10 8
+area is: 80 perimeter is: 36
