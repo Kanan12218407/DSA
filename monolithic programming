@@ -1,0 +1,19 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+using namespace std;
+int main()
+{
+    int length=0,breadth=0;
+    cout<<"enter the value of length and breadth: "<<endl;
+    cin>>length>>breadth;
+    int area=length*breadth;
+    int perimeter=2*(length+breadth);
+    cout<<"the value of area is: "<<area<<endl<<"the value of perimeter is: "<<perimeter<<endl;
+    return 0;
+}
+output:
+enter the value of length and breadth: 
+10 5
+the value of area is: 50
+the value of perimeter is: 30
