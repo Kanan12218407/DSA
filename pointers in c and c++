@@ -1,0 +1,44 @@
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+int main(){
+    // int a=10;
+    // int *p;
+    // p=&a;
+    // cout<<a<<endl;
+    // cout<<"using pointer:"<<*p<<endl;
+    // printf("using pointer: %d\n",*p);
+    // printf("using pointer: %d\n",p);
+    // printf("using pointer: %d\n",&a);
+    // int A[5]={1,2,3,4,5};
+    // int *p;
+    // p=A;
+    int *p;
+    // in C:
+    p=(int *)malloc(5*sizeof(int));
+    //in C++:
+    //p=new int[5];
+    p[0]=1;
+    p[1]=2;
+    p[2]=3;
+    p[3]=4;
+    p[4]=5;
+    for(int i=0;i<5;i++)
+    {
+    //   cout<<A[i]<<endl;
+      cout<<p[i]<<endl;
+    }
+    //c++:
+    //delete[ ] p;
+    //c:
+    free(p);
+    
+    return 0;
+    
+}
+output:
+1
+2
+3
+4
+5
