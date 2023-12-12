@@ -1,0 +1,32 @@
+#include<iostream>
+#include<stdio.h>
+#include<stdlib.h>
+using namespace std;
+void towerofhanoi(int n,int a,int b,int c){
+    if(n>0){
+        towerofhanoi(n-1,a,c,b);
+        printf("(%d,%d)\n",a,c);
+        cout<<"move disk "<<n<<" from "<<a<<" to "<<c<<endl;
+        towerofhanoi(n-1,b,a,c);
+    }
+}
+int main(){
+    towerofhanoi(3,1,2,3);
+    
+    return 0;
+}
+output:
+(1,3)
+move disk 1 from 1 to 3
+(1,2)
+move disk 2 from 1 to 2
+(3,2)
+move disk 1 from 3 to 2
+(1,3)
+move disk 3 from 1 to 3
+(2,1)
+move disk 1 from 2 to 1
+(2,3)
+move disk 2 from 2 to 3
+(1,3)
+move disk 1 from 1 to 3
